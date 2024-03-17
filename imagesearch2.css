@@ -1,0 +1,108 @@
+﻿body
+{
+	background-color: #f9f9f9;
+	margin:0;
+	font-family: arial;
+}
+h1{
+	text-align: center;
+	font-size: 36px;
+	font-weight: bold;
+	margin-top: 40px;
+	margin-bottom: 60px;
+}
+form{
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 60px;
+}
+form input[type ="text"]{
+	font-size: 18px;
+	color: #333;
+	border: none;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, .2);
+	width: 60%;
+	max-width: 400px;
+	border-radius: 5px;
+	padding: 10px 20px;
+}
+form input[type ="button"]{
+	font-size: 18px;
+	color: white;
+	background-color: #4caf50;
+	border: none;
+	border-radius: 5px;
+	padding: 10px 20px;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, .2);
+	cursor: pointer;
+	transition: background-color .3s ease-in-out;
+}
+form input[type ="button"]:hover{
+	background-color: #3e8e41;
+}
+.search-results{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 20px;
+}
+.image-result{
+	margin-bottom: 60px;
+	border-radius: 5px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+	width: 30%;
+	overflow: hidden;
+}
+.image-result img{
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+	transition: transform .3s ease-in-out;
+}
+.image-result:hover img{
+	transform: scale(1.05);
+}
+.image-result a{
+	padding: 10px;
+	display: block;
+	text-decoration: none;
+	color: #333;
+	transition: background-color .3s ease-in-out;
+}
+.image-result:hover a{
+	background-color:  rgba(0, 0, 0, .1);
+}
+#show-more-button{
+	background-color: #008cba;
+	color: white;
+	border: none;
+	text-align: center;
+	border-radius: 5px;
+	padding: 10px 20px;
+	margin: 20px auto;
+	cursor: pointer;
+	display: block;
+	transition: background-color .3s ease-in-out;
+}
+#show-more-button:hover{
+	background-color: #0077b5;
+}
+@media screen and (max-width: 768px){
+	.image-result{
+		width: 45%;
+	}
+}
+@media screen and (max-width: 480px){
+	.image-result{
+		width: 100%;
+	}
+	form{
+		flex-direction: column;
+	}
+	form input[type ="text"]{
+		width: 80%;
+		margin-bottom: 20px;
+	}
